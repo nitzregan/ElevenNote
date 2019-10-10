@@ -55,11 +55,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201910091445035_InitialCreate.cs" />
+    <Compile Include="Migrations\201910091445035_InitialCreate.Designer.cs">
+      <DependentUpon>201910091445035_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910101331453_changedmisspelling.cs" />
+    <Compile Include="Migrations\201910101331453_changedmisspelling.Designer.cs">
+      <DependentUpon>201910101331453_changedmisspelling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910091445035_InitialCreate.resx">
+      <DependentUpon>201910091445035_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910101331453_changedmisspelling.resx">
+      <DependentUpon>201910101331453_changedmisspelling.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
