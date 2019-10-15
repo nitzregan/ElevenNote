@@ -20,11 +20,15 @@ namespace ElevenNote.WebMVC.Controllers
             var service = new NoteService(userId);
             var model = service.GetNotes();
 
+
             return View(model);
         }
 
         public ActionResult Create()
         {
+            var service = new CategoryService();
+            var model = service.GetCategories();
+            ViewBag.Category = model;
             return View();
         }
 
@@ -57,6 +61,10 @@ namespace ElevenNote.WebMVC.Controllers
 
         public ActionResult Edit(int id)
         {
+            var serviceTwo = new CategoryService();
+            var modelTwo = serviceTwo.GetCategories();
+            ViewBag.Category = modelTwo;
+
             var service = CreateNoteService();
             var detail = service.GetNoteById(id);
             var model =
@@ -64,7 +72,8 @@ namespace ElevenNote.WebMVC.Controllers
                 {
                     NoteId = detail.NoteId,
                     Title = detail.Title,
-                    Content = detail.Content
+                    Content = detail.Content,
+                    CategoryID = detail.CategoryID
                 };
             return View(model);
         }

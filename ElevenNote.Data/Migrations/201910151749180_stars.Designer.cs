@@ -7,13 +7,13 @@ namespace ElevenNote.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class changedmisspelling : IMigrationMetadata
+    public sealed partial class stars : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changedmisspelling));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(stars));
         
         string IMigrationMetadata.Id
         {
-            get { return "201910101331453_changedmisspelling"; }
+            get { return "201910151749180_stars"; }
         }
         
         string IMigrationMetadata.Source
